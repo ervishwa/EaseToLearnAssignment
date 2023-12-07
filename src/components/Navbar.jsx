@@ -3,7 +3,7 @@ import { NavbarCircle } from "./NavbarCircle";
 
 export default function Navbar() {
   return (
-    <div className=" bg-red-400 h-[68px] flex items-center justify-center relative z-10">
+    <div className=" bg-red-400 h-[68px] flex items-center justify-center z-10 sticky top-0">
       <div className="flex gap-2 items-center relative">
         <NavbarCircle blue={true} text={"Form Selection"} />
         <span class="material-symbols-outlined absolute text-sm left-[1px]">
