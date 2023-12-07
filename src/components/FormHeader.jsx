@@ -9,7 +9,7 @@ export default function FormHeader() {
           You will be able to customize the fields in the later stage
         </p>
       </div>
-      <div className="bg-blue-100 rounded-t-lg border pt-6 pr-24 pl-4 mt-2">
+      <div className="bg-[#1A8FE6] bg-opacity-30 rounded-t-lg border pt-6 pr-24 pl-4 mt-2">
         <div className="mb-4">
           <div>
             <p className="text-xl font-medium">Name of the Enquiry Form</p>

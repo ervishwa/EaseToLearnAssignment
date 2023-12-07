@@ -3,8 +3,14 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const Dropdown = ({ id, name, options, value, onChange, onBlur }) => (
-  <select id={id} name={name} onChange={onChange} onBlur={onBlur} value={value}
-  className="w-full h-10 rounded-md p-2 border border-gray-400 text-gray-400">
+  <select
+    id={id}
+    name={name}
+    onChange={onChange}
+    onBlur={onBlur}
+    value={value}
+    className="w-full h-10 rounded-md p-2 border border-gray-400 text-gray-400"
+  >
     <option value="">Select</option>
     {options.map((option) => (
       <option key={option.value} value={option.value}>
@@ -36,7 +42,7 @@ export function InterviewScheduleForm() {
   });
 
   const timeZones = [
-    {value:"temp",label:"Search or Select a time zone from below"},
+    { value: "temp", label: "Search or Select a time zone from below" },
     { value: "UTC", label: "Coordinated Universal Time (UTC)" },
     { value: "GMT", label: "Greenwich Mean Time (GMT)" },
     { value: "EST", label: "Eastern Standard Time (EST)" },
@@ -45,7 +51,7 @@ export function InterviewScheduleForm() {
   ];
 
   const interviewMediumOptions = [
-    {value:"temp",label:"Search or Select a time zone from below"},
+    { value: "temp", label: "Search or Select a time zone from below" },
     { value: "In-person", label: "In-person" },
     { value: "Phone", label: "Phone" },
     { value: "Video", label: "Video" },
@@ -64,10 +70,12 @@ export function InterviewScheduleForm() {
   });
 
   return (
-    <div className="w-3/4 px-24 pt-8 pb-8 rounded-b-lg shadow-lg">
+    <div className="w-3/4 px-24 pt-8 pb-8 rounded-b-lg shadow-lg h-[400px] overflow-scroll">
       <form onSubmit={formik.handleSubmit}>
-        <div>
-          <label htmlFor="email">1. Email*</label>
+        <div className="mb-4">
+          <label htmlFor="email" className="text-gray-600">
+            1. Email*
+          </label>
           <br />
           <input
             type="email"
@@ -84,8 +92,10 @@ export function InterviewScheduleForm() {
           )}
         </div>
 
-        <div>
-          <label htmlFor="location">2. Location</label>
+        <div className="mb-4">
+          <label htmlFor="location" className="text-gray-600">
+            2. Location
+          </label>
           <br />
           <input
             type="text"
@@ -102,8 +112,10 @@ export function InterviewScheduleForm() {
           )}
         </div>
 
-        <div>
-          <label htmlFor="interviewDate">3. Interview Date</label>
+        <div className="mb-4">
+          <label htmlFor="interviewDate" className="text-gray-600">
+            3. Interview Date
+          </label>
           <br />
           <input
             type="date"
@@ -115,12 +127,16 @@ export function InterviewScheduleForm() {
             className="w-full h-10 rounded-md p-2 border border-gray-400 text-gray-400"
           />
           {formik.touched.interviewDate && formik.errors.interviewDate && (
-            <div className="text-xs text-red-500">{formik.errors.interviewDate}</div>
+            <div className="text-xs text-red-500">
+              {formik.errors.interviewDate}
+            </div>
           )}
         </div>
 
-        <div>
-          <label htmlFor="interviewTime">4. Interview Time</label>
+        <div className="mb-4">
+          <label htmlFor="interviewTime" className="text-gray-600">
+            4. Interview Time
+          </label>
           <br />
           <input
             type="time"
@@ -133,12 +149,16 @@ export function InterviewScheduleForm() {
             className="w-2/5 h-10 rounded-md p-2 border border-gray-400 text-gray-400"
           />
           {formik.touched.interviewTime && formik.errors.interviewTime && (
-            <div className="text-xs text-red-500">{formik.errors.interviewTime}</div>
+            <div className="text-xs text-red-500">
+              {formik.errors.interviewTime}
+            </div>
           )}
         </div>
 
-        <div>
-          <label htmlFor="timeZone">5. Time Zone</label>
+        <div className="mb-4">
+          <label htmlFor="timeZone" className="text-gray-600">
+            5. Time Zone
+          </label>
           <br />
           <Dropdown
             id="timeZone"
@@ -153,8 +173,10 @@ export function InterviewScheduleForm() {
           )}
         </div>
 
-        <div>
-          <label htmlFor="interviewMedium">6. Interview Medium</label>
+        <div className="mb-4">
+          <label htmlFor="interviewMedium" className="text-gray-600">
+            6. Interview Medium
+          </label>
           <br />
           <Dropdown
             id="interviewMedium"
@@ -165,7 +187,9 @@ export function InterviewScheduleForm() {
             value={formik.values.interviewMedium}
           />
           {formik.touched.interviewMedium && formik.errors.interviewMedium && (
-            <div className="text-xs text-red-500">{formik.errors.interviewMedium}</div>
+            <div className="text-xs text-red-500">
+              {formik.errors.interviewMedium}
+            </div>
           )}
         </div>
       </form>

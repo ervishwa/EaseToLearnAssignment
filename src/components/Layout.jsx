@@ -1,14 +1,14 @@
-import React from 'react'
-import Navbar from './Navbar'
-import { Sidebar } from './Sidebar'
-import FormHeader from './FormHeader'
-import { Footer } from './Footer'
-import { Outlet } from 'react-router-dom'
+import React from "react";
+import Navbar from "./Navbar";
+import { Sidebar } from "./Sidebar";
+import FormHeader from "./FormHeader";
+import { Footer } from "./Footer";
+import { Outlet } from "react-router-dom";
 
 export function Layout() {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div className="flex">
         <div className="w-1/3">
           <Sidebar />
@@ -20,5 +20,5 @@ export function Layout() {
       </div>
       <Footer />
     </>
-  )
+  );
 }

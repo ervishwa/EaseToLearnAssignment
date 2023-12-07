@@ -31,7 +31,7 @@ export function StateMentOfPurposeForm() {
     <div className="w-3/4 px-24 pt-12 pb-8 rounded-b-lg shadow-lg">
       <form onSubmit={formik.handleSubmit}>
         <div className="relative mb-3">
-          <label htmlFor="questionA">
+          <label htmlFor="questionA" className="text-gray-600">
             1. Tell me about a time you were asked to do something you had never
             done before. How did you react? What did you learn?
           </label>
@@ -56,7 +56,7 @@ export function StateMentOfPurposeForm() {
         </div>
 
         <div className="relative mb-3">
-          <label htmlFor="questionB">
+          <label htmlFor="questionB" className="text-gray-600">
             2. Tell me about the last time something significant didn’t go
             according to plan at work. What was your role? What was the outcome?
           </label>
@@ -81,7 +81,7 @@ export function StateMentOfPurposeForm() {
         </div>
 
         <div className="relative mb-3">
-          <label htmlFor="questionC">
+          <label htmlFor="questionC" className="text-gray-600">
             3. What are the three things that are most important to you in a
             job?
           </label>
